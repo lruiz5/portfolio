@@ -110,7 +110,7 @@ export const getStaticProps = async () => {
       data: {
         url: "https://account.docusign.com/oauth/auth?response_type=code&scope=signature&client_id=f19d49ee-ed75-4a74-aa70-1c2213a9d290&redirect_uri=https://apply.northforklumbercompany.com",
         slug: "nfl-jobs",
-        title: "DocuSign Online Form",
+        title: "SignAssure",
         caption:
           "A responsive, scalable online application that allows for identity verification using Embedded Signing via DocuSign's API.",
         preview: "/img/nfl-docusign-promo.webp",
