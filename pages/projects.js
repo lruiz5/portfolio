@@ -121,7 +121,7 @@ export const getStaticProps = async () => {
       data: {
         url: "",
         slug: "nfl-saws",
-        title: "Lumber Mill Data Collection",
+        title: "Lumbermill Data Collection",
         caption:
           "A real-time collaborative data tracking program complete with Admin Portal. Build with Next.js, Prisma, and SQLite.",
         preview: "/img/nflc-saws-promo.webp",
