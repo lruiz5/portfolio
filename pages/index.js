@@ -85,16 +85,7 @@ const Home = () => (
             I am actively seeking new employment opportunities, my inbox is open
             to any inqueries. Feel free to ask me anything!
           </p>
-          <div
-            className="grid-container"
-            style={{
-              gap: "2rem",
-              marginTop: "2rem",
-              gridTemplateColumns: "repeat(2, 1fr)",
-              justifyItems: "stretch",
-              alignItems: "stretch",
-            }}
-          >
+          <div className="grid-container button-container">
             <Link href="mailto:hello@shellbear.me">
               <Button size="lg" className="custom-button primary full-width">
                 <motion.span

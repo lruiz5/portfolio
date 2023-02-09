@@ -5,6 +5,8 @@
 
 // Pages
 @import './index';
+@import './about';
+@import './projects';
 
 html,
 body {
@@ -160,5 +162,8 @@ a:hover {
     flex-direction: column;
     display: grid;
     grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .title{
+    font-size: 3rem;
   }
 }
