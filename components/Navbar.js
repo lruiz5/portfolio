@@ -33,7 +33,7 @@ const Header = ({ className }) => {
           className={`port-navbar port-default absolute ${className} ${
             width < 688 && isOpen ? "is-open" : "is-closed"
           }`}
-          dark
+          light
           expand="md"
         >
           <BsNavBrand />

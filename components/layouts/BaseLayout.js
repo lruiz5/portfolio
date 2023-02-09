@@ -1,6 +1,5 @@
 import Header from "components/shared/Header";
 import Footer from "components/shared/Footer";
-import Container from "components/Container";
 
 const BaseLayout = (props) => {
   const { navClass = "with-bg", user, loading, children } = props;

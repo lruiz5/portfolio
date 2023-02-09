@@ -1,28 +1,29 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Container from "components/Container";
-import Title from "components/Title";
-import Button from "components/Button";
-import Grid from "components/Grid";
+import { Button } from "reactstrap";
 import Link from "next/link";
-import Text from "components/Text";
 import BaseLayout from "components/layouts/BaseLayout";
 import BasePage from "components/BasePage";
 
 const Home = () => (
   <BaseLayout>
     <BasePage>
-      <Container
-        justifyContent="center"
-        alignContent="center"
-        alignItems="center"
-        textAlign="center"
-        paddingY="25px"
-        paddingBottom="40px"
-        gridGap="4rem"
+      <div
+        className="container py-25"
+        style={{
+          justifyContent: "center",
+          alignContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          gap: "4rem",
+          paddingBottom: "40px",
+        }}
       >
-        <Container alignItems="center" alignContent="center">
+        <div
+          className="container"
+          style={{ alignContent: "center", alignItems: "center" }}
+        >
           <Image
             src="/me.webp"
             alt="Luis Ruiz"
@@ -31,19 +32,21 @@ const Home = () => (
             style={{ objectFit: "cover" }}
             className="image"
           />
-          <Title>Luis Ruiz</Title>
-          <Title
-            fontSize="2rem"
-            color="rgba(0, 0, 0, 0.6)"
-            fontWeight="500"
-            as="h2"
+          <h1 className="title">Luis Ruiz</h1>
+          <h2
+            className="title"
+            style={{
+              fontSize: "2rem",
+              color: "rgba(0, 0, 0, 0.6)",
+              fontWeight: "500",
+            }}
           >
             I build web apps.
-          </Title>
-        </Container>
-        <Container maxWidth="700px" gridGap="3rem">
-          <Container>
-            <Text textAlign="center">
+          </h2>
+        </div>
+        <div className="container" style={{ maxWidth: "700px", gap: "3rem" }}>
+          <div className="container">
+            <p className="text" style={{ textAlign: "center" }}>
               I&apos;m a Full Stack developer with experience in DevOps,
               Backend, Frontend and mobile development. Currently Lead Software
               Developer at&nbsp;
@@ -51,32 +54,49 @@ const Home = () => (
                 Biztech
               </a>{" "}
               and living in California.
-            </Text>
-          </Container>
+            </p>
+          </div>
           <Link href="/about">
-            <Button>More about me &rarr;</Button>
+            <Button size="lg" className="custom-button primary">
+              More about me &rarr;
+            </Button>
           </Link>
-        </Container>
-      </Container>
+        </div>
+      </div>
 
-      <Container alignItems="center" paddingY="4rem">
-        <Container maxWidth="600px" alignItems="center" alignContent="center">
-          <Title fontSize="3rem" as="h3">
-            Get in touch
-          </Title>
-          <Text textAlign="center">
-            Although I&apos;m not actively looking for job opportunities, my
-            inbox is still open for you. Feel free to ask me anything!
-          </Text>
-          <Grid
-            gridGap="2rem"
-            marginTop="2rem"
-            gridTemplateColumns={["1fr", "repeat(2, 1fr)"]}
-            justifyItems="stretch"
-            alignItems="stretch"
+      <div
+        className="container"
+        style={{
+          alignItems: "center",
+          paddingTop: "4rem",
+          paddingBottom: "4rem",
+        }}
+      >
+        <div
+          className="container"
+          style={{
+            maxWidth: "600px",
+            alignItems: "center",
+            alignContent: "center",
+          }}
+        >
+          <h3 style={{ fontSize: "3rem" }}>Get in touch</h3>
+          <p className="text" style={{ textAlign: "center" }}>
+            I am actively seeking new employment opportunities, my inbox is open
+            to any inqueries. Feel free to ask me anything!
+          </p>
+          <div
+            className="grid-container"
+            style={{
+              gap: "2rem",
+              marginTop: "2rem",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              justifyItems: "stretch",
+              alignItems: "stretch",
+            }}
           >
             <Link href="mailto:hello@shellbear.me">
-              <Button width="100%">
+              <Button size="lg" className="custom-button primary full-width">
                 <motion.span
                   initial={{ display: "inline-block" }}
                   animate={{ rotate: [0, 14, -8, 14, -4, 10, 0, 0] }}
@@ -91,22 +111,14 @@ const Home = () => (
                 Say hello
               </Button>
             </Link>
-            <Link
-              target="_blank"
-              href="https://calendly.com/antoine-ordonez/intro"
-            >
-              <Button
-                width="100%"
-                backgroundColor="rgb(226,232,240)"
-                color="black"
-                variant="secondary"
-              >
+            <Link target="_blank" href="https://calendly.com/lruiz5/intro">
+              <Button size="lg" className="custom-button secondary full-width">
                 Schedule a meeting
               </Button>
             </Link>
-          </Grid>
-        </Container>
-      </Container>
+          </div>
+        </div>
+      </div>
     </BasePage>
   </BaseLayout>
 );

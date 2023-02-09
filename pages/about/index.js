@@ -1,10 +1,5 @@
 import React from "react";
-import Text from "components/Text";
-import Title from "components/Title";
-import Container from "components/Container";
-import Grid from "components/Grid";
 import Link from "next/link";
-import Card from "components/Card";
 import BaseLayout from "components/layouts/BaseLayout";
 import BasePage from "components/BasePage";
 import {
@@ -21,7 +16,6 @@ import {
   SiPython,
   SiLinux,
 } from "react-icons/si";
-import TransparentLink from "components/TransparentLink";
 
 const stacks = [
   {
@@ -77,103 +71,150 @@ const stacks = [
 const About = ({ experiences }) => (
   <BaseLayout>
     <BasePage>
-      <Container alignContent="center" alignItems="center">
-        <Title fontSize={["3rem", "4rem"]} as="h2">
+      <div
+        className="container"
+        style={{ alignContent: "center", alignItems: "center" }}
+      >
+        <h2 className="title" fontSize={["3rem", "4rem"]}>
           Passionate Software Developer
-        </Title>
-        <Container maxWidth={["100%", "720px"]} marginY="2rem">
-          <Text>I&apos;m a Full-Stack/DevOps developer living in Eureka.</Text>
-          <Text>
+        </h2>
+        <div
+          className="container full-width"
+          style={{
+            maxWidth: "720px",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+          }}
+        >
+          <p className="text">
+            I&apos;m a Full-Stack/DevOps developer living in California.
+          </p>
+          <p className="text">
             I find my joy in my faith in Jesus Christ, the peaceful atmosphere
             of the beach and the satisfaction and pleasure of creating something
             from scratch. These three things are important aspects of my life
             and are integral to who i am. The natural beauty of the beach, and
             the process of baking bread allow me to tap into my creativity and
             practice patience and attention to detail.
-          </Text>
-        </Container>
-      </Container>
+          </p>
+        </div>
+      </div>
 
-      <Container
-        paddingY="4rem"
-        gridGap="2rem"
-        alignContent="center"
-        alignItems="center"
-        textAlign="center"
-        width="100%"
+      <div
+        className="container full-width"
+        style={{
+          paddingTop: "4rem",
+          paddingBottom: "4rem",
+          gap: "2rem",
+          alignContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+        }}
       >
-        <Title fontSize="40px" as="h2">
+        <h2 className="title" style={{ fontSize: "40px" }}>
           Technologies I frequently use
-        </Title>
-        <Grid
-          gridTemplateColumns={["repeat(3 , 1fr)", "repeat(6 , 1fr)"]}
-          gridGap="1rem"
-          justifyItems="center"
-          maxWidth="40rem"
+        </h2>
+        <div
+          className="grid-container"
+          style={{
+            gap: "1rem",
+            justifyItems: "center",
+            maxWidth: "40rem",
+            gridTemplateColumns: "repeat(6 , 1fr)",
+          }}
         >
           {stacks.map(({ Icon, url }, i) => (
             <Link href={url} key={url}>
-              <Card key={i}>
+              <div className="item-card" key={i}>
                 <Icon size="2rem" />
-              </Card>
+              </div>
             </Link>
           ))}
-        </Grid>
-      </Container>
-      <Container
-        alignContent="center"
-        alignItems="center"
-        textAlign="center"
-        width="100%"
-        paddingBottom="4rem"
-        gridGap="3rem"
+        </div>
+      </div>
+      <div
+        className="container full-width"
+        style={{
+          alignContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          paddingBottom: "4rem",
+          gap: "3rem",
+        }}
       >
-        <Title fontSize="40px" as="h2">
+        <h2 className="title" style={{ fontSize: "40px" }}>
           Work Experiences
-        </Title>
-        <Container width="100%">
+        </h2>
+        <div className="container full-width">
           {experiences.map((data, i) => (
-            <TransparentLink href={`/about/${data.slug}`} key={data.slug}>
-              <Grid
+            <Link
+              className="transparent-link"
+              href={`/about/${data.slug}`}
+              key={data.slug}
+            >
+              <div
+                className="grid-container"
                 key={i}
-                gridTemplateColumns="1fr 4fr"
-                justifyItems="flex-start"
-                gridGap="1rem"
-                paddingY="2rem"
-                borderBottom="1px solid rgba(0,0,0,0.1)"
+                style={{
+                  gridTemplateColumns: "1fr 4fr",
+                  justifyItems: "flex-start",
+                  gap: "1rem",
+                  paddingTop: "2rem",
+                  paddingBottom: "2rem",
+                  borderBottom: "1px solid rgba(0,0,0,0.1)",
+                }}
               >
-                <Container width="100%">
-                  <Text>0{experiences.length - i}</Text>
-                </Container>
-                <Grid width="100%" gridTemplateColumns="4fr 1fr">
-                  <Container
-                    width="100%"
-                    alignItems="flex-start"
-                    textAlign="start"
+                <div className="container full-width">
+                  <p className="text" style={{ fontWeight: "normal" }}>
+                    0{experiences.length - i}
+                  </p>
+                </div>
+                <div
+                  className="grid-container full-width"
+                  style={{ gridTemplateColumns: "4fr 1fr" }}
+                >
+                  <div
+                    className="container full-width"
+                    style={{ alignItems: "flex-start", textAlign: "start" }}
                   >
-                    <Grid
-                      width="100%"
-                      gridTemplateColumns="repeat(2, auto)"
-                      justifyItems="flex-start"
-                      justifyContent="flex-start"
-                      gridGap="1rem"
+                    <div
+                      className="grid-container full-width"
+                      style={{
+                        justifyItems: "flex-start",
+                        justifyContent: "flex-start",
+                        gap: "1rem",
+                        gridTemplateColumns: "repeat(2, auto)",
+                      }}
                     >
-                      <Title fontSize="1.5rem" margin={0} as="h3">
+                      <h3
+                        className="title"
+                        style={{ fontSize: "1.5rem", margin: 0 }}
+                      >
                         {data.position}
-                      </Title>
-                      <Text fontSize="smaller" margin={0}>
+                      </h3>
+                      <p
+                        className="text"
+                        style={{ fontSize: "12px", margin: 0 }}
+                      >
                         {data.date}
-                      </Text>
-                    </Grid>
-                    <Text fontSize="1rem">{data.description}</Text>
-                  </Container>
-                  <Text fontSize="1.5rem">&rarr;</Text>
-                </Grid>
-              </Grid>
-            </TransparentLink>
+                      </p>
+                    </div>
+                    <p
+                      className="text"
+                      style={{ fontSize: "1rem", fontWeight: "normal" }}
+                    >
+                      {data.description}
+                    </p>
+                  </div>
+                  <p className="text" style={{ fontSize: "1.5rem" }}>
+                    &rarr;
+                  </p>
+                </div>
+              </div>
+            </Link>
           ))}
-        </Container>
-      </Container>
+        </div>
+      </div>
     </BasePage>
   </BaseLayout>
 );
@@ -186,7 +227,7 @@ export const getStaticProps = async () => {
       position: "Lead Software Developer",
       date: "Mar 2022 - Now",
       description:
-        "Discover more about experience as a Lead Software Developer.",
+        "My experience managing a team, providing technical leadership, and ensuring delivery of high-quality software.",
       image: "/img/lead.jpeg",
       blurImage: "LHL47{A0-TZgx]4o~qX8Q+D%W;s8",
       stack: ["React", "AWS", "Wordpress", "mySql"],
@@ -224,7 +265,7 @@ export const getStaticProps = async () => {
       position: "DevOps Engineer",
       date: "Jan 2021 - March 2022",
       description:
-        "Discover more about my first experience as a DevOps Engineer",
+        "Optimizing the most automated lumber mill in Northern California.",
       image: "/img/saw-filer.jpeg",
       blurImage: "LFEyVy?b9F0J?w-pIUIU9FIokDxu",
       stack: ["React", "AWS", "Wordpress", "mySql"],
@@ -263,7 +304,8 @@ export const getStaticProps = async () => {
       title: "Humboldt Area Foundation",
       position: "Mobile Applications Developer",
       date: "Feb 2020 - Dec 2021",
-      description: "What I learned about the app store.",
+      description:
+        "What I learned about cross-platform development and the app stores.",
       image: "/img/mobile-app-dev.jpeg",
       blurImage: "LHN0*haxyC9F+qbvkrDi?wo~xtR6",
       stack: ["React", "AWS", "Wordpress", "mySql"],
@@ -301,7 +343,7 @@ export const getStaticProps = async () => {
       title: "Biztech Eureka",
       position: "Web Developer",
       date: "Aug 2019 - Feb 2020",
-      description: "My first job in tech.",
+      description: "My first job in software development. Full Stack.",
       image: "/img/webdev.png",
       blurImage: "LSP%hmS$~T$$?akCWBjE?Yr=RkR.",
       stack: ["React", "AWS", "Wordpress", "mySql"],
