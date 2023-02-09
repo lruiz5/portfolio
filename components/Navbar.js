@@ -18,7 +18,7 @@ const BsNavLink = (props) => {
 const BsNavBrand = () => {
   return (
     <Link className="navbar-brand port-navbar-brand" href="/">
-      Luis Ruiz
+      <Image src="/img/dove-touch-icon.png" width={30} height={30} />
     </Link>
   );
 };

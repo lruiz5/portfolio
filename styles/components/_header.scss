@@ -14,7 +14,13 @@
         letter-spacing: 1px;
         font-weight: 500;
         border-bottom: 0px solid black;
+        transform: scaleX(-1);
+        &:hover{
+          transform: scaleX(1);
+        }
       }
+      
+
   
       &-item {
         margin-left: 10px;
