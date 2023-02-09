@@ -115,7 +115,7 @@ const About = ({ experiences }) => (
           Technologies I frequently use
         </h2>
         <div
-          className="grid-container"
+          className="grid-container technologies"
           style={{
             gap: "1rem",
             justifyItems: "center",
