@@ -4,7 +4,6 @@ import Image from "next/image";
 import Separator from "components/Separator";
 
 const AboutDetails = ({ experience }) => {
-  console.log(experience);
   return (
     <BaseLayout>
       <BasePage
