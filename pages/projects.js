@@ -1,13 +1,8 @@
 import BasePage from "components/BasePage";
 import BaseLayout from "components/layouts/BaseLayout";
-import Container from "components/Container";
 import Link from "next/link";
-import Button from "components/Button";
-import Title from "components/Title";
-import Text from "components/Text";
-import Grid from "components/Grid";
+import { Button } from "reactstrap";
 import styled from "styled-components";
-import List from "components/List";
 
 const ProjectImage = styled.img({
   width: "100%",
@@ -20,7 +15,7 @@ const ProjectImage = styled.img({
   },
 });
 
-const ProjectContainer = styled(Container)({
+const ProjectContainer = styled.div({
   flexDirection: "column",
   alignItems: "flex-start",
   gridGap: "1.5rem",
@@ -43,62 +38,73 @@ export default function Projects({ projects }) {
   return (
     <BaseLayout>
       <BasePage>
-        <Container alignItems="center">
-          <Title>Projects</Title>
-          <Text textAlign="center">
+        <div className="container" style={{ alignItems: "center" }}>
+          <h1 className="title">Projects</h1>
+          <p className="text" style={{ textAlign: "center" }}>
             I&apos;m always working on new projects. <br />
             You can find them on my&nbsp;
             <a href="https://github.com/lruiz5">Github</a>.
-          </Text>
-        </Container>
-        <Grid
-          py="4rem"
-          gridTemplateColumns={["1fr", "repeat(2, 1fr)"]}
-          width="100%"
-          gridGap="10%"
+          </p>
+        </div>
+        <div
+          className="grid-container full-width"
+          style={{
+            paddingTop: "4rem",
+            paddingBottom: "4rem",
+            gridTemplateColumns: "repeat(2, 1fr)",
+            gap: "10%",
+          }}
         >
           {projects.map(({ data }) => (
-            <ProjectContainer key={data.slug}>
+            <ProjectContainer className="container" key={data.slug}>
               <Link href={data.url} width="100%">
                 <ProjectImage src={data.preview} />
               </Link>
-              <Container
-                flexDirection="row"
-                justifyContent="space-between"
-                alignItems="center"
-                width="100%"
+              <div
+                className="container full-width"
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
               >
                 <Link href={data.url}>
-                  <Title fontSize="2rem" as="h2">
+                  <h2 className="title" style={{ fontSize: "2rem" }}>
                     {data.title}
-                  </Title>
+                  </h2>
                 </Link>
                 <Link href={data.url}>
-                  <ProjectButton variant="secondary">
+                  <Button size="md" className="custom-button secondary">
                     View Project
-                  </ProjectButton>
+                  </Button>
                 </Link>
-              </Container>
-              <Container gridGap="1rem">
-                <Text
-                  textAlign="start"
-                  margin={0}
-                  lineHeight="180%"
-                  letterSpacing="0.02rem"
+              </div>
+              <div className="container" style={{ gap: "1rem" }}>
+                <p
+                  className="text"
+                  style={{
+                    textAlign: "start",
+                    margin: 0,
+                    lineHeight: "180%",
+                    letterSpacing: "0.02rem",
+                  }}
                 >
                   {data.caption}
-                </Text>
+                </p>
                 {
-                  <List marginY="1rem">
+                  <ul
+                    className="list"
+                    style={{ marginTop: "1rem", marginBottom: "1rem" }}
+                  >
                     {data.tags.map((tag) => (
                       <ProjectTag key={tag}>{tag}</ProjectTag>
                     ))}
-                  </List>
+                  </ul>
                 }
-              </Container>
+              </div>
             </ProjectContainer>
           ))}
-        </Grid>
+        </div>
       </BasePage>
     </BaseLayout>
   );

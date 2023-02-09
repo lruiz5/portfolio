@@ -1,6 +1,3 @@
-import Container from "components/Container";
-import Title from "components/Title";
-import Text from "components/Text";
 import BasePage from "components/BasePage";
 import BaseLayout from "components/layouts/BaseLayout";
 import Image from "next/image";
@@ -14,17 +11,24 @@ const AboutDetails = ({ experience }) => {
         indexPage
         metaTitle={`${experience.position} - ${experience.title}`}
       >
-        <Container>
+        <div className="container">
           <div style={{ display: "flex", flexDirection: "row", gap: "1em" }}>
             {experience.tags.map((tag) => (
-              <Text fontSize="small" color="plum" key={tag}>
+              <p
+                className="text"
+                style={{ fontSize: "small", color: "plum" }}
+                key={tag}
+              >
                 #{tag}
-              </Text>
+              </p>
             ))}
           </div>
-          <Title style={{ textAlign: "start" }} fontSize={["2.5rem", "4rem"]}>
+          <h1
+            className="title"
+            style={{ textAlign: "start", fontSize: "4rem" }}
+          >
             {experience.title} - {experience.position}
-          </Title>
+          </h1>
           <div
             style={{
               flexDirection: "row",
@@ -32,7 +36,7 @@ const AboutDetails = ({ experience }) => {
               marginBottom: "2rem",
             }}
           >
-            <Text>📅 {experience.date}</Text>
+            <p className="text">📅 {experience.date}</p>
             <a href={experience.link}>🔗 Website</a>
           </div>
           <div style={{ position: "relative", width: "100%", height: "400px" }}>
@@ -43,7 +47,6 @@ const AboutDetails = ({ experience }) => {
               style={{ objectFit: "fill" }}
               placeholder="blur"
               blurDataURL="LAL}W_WC00WAH;-:IVxu00M{~pof"
-              S
             />
           </div>
           <div
@@ -51,23 +54,23 @@ const AboutDetails = ({ experience }) => {
             style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
           >
             <div
-              className="px-4z pt-2 rounded-3"
+              className="px-4 pt-2 rounded-3"
               style={{
                 backgroundColor: "rgb(241, 241, 239)",
                 verticalAlign: "center",
               }}
             >
-              <Text as="h3" fontWeight="normal">
+              <h3 className="text" style={{ fontWeight: "normal" }}>
                 {experience.description}
-              </Text>
+              </h3>
             </div>
-            <Text m="0" fontSize="smaller">
+            <p style={{ margin: 0, fontSize: "smaller" }}>
               {experience.stack.join(", ")}
-            </Text>
+            </p>
           </div>
-        </Container>
+        </div>
         <Separator />
-        <Container>
+        <div className="container">
           <ul style={{ lineHeight: "2.25em" }}>
             {experience.details.map((detail, index) => {
               return (
@@ -84,7 +87,7 @@ const AboutDetails = ({ experience }) => {
               );
             })}
           </ul>
-        </Container>
+        </div>
       </BasePage>
     </BaseLayout>
   );
@@ -97,12 +100,11 @@ export const getStaticPaths = async () => {
       title: "Biztech Eureka",
       position: "Lead Software Developer",
       date: "Mar 2022 - Now",
-      description:
-        "Discover more about experience as a Lead Software Developer.",
+      description: "",
       image: "/img/lead.jpeg",
       blurImage: "LHL47{A0-TZgx]4o~qX8Q+D%W;s8",
-      stack: ["React", "AWS", "Wordpress", "mySql"],
-      tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
+      stack: ["React", "AWS", "WordPress", "mySql"],
+      tags: ["Next.js", "AWS", "Vercel", "DocuSign API"],
       details: [
         {
           description:
@@ -136,11 +138,11 @@ export const getStaticPaths = async () => {
       position: "DevOps Engineer",
       date: "Jan 2021 - March 2022",
       description:
-        "Discover more about my first experience as a DevOps Engineer",
+        "I learned how to implement CI/CD and navigate a fast paced work environment.",
       image: "/img/saw-filer.jpeg",
       blurImage: "LFEyVy?b9F0J?w-pIUIU9FIokDxu",
-      stack: ["React", "AWS", "Wordpress", "mySql"],
-      tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
+      stack: ["React", "AWS", "WordPress", "mySql"],
+      tags: ["Next.js", "AWS", "Vercel", "DocuSign API"],
       details: [
         {
           description:
@@ -174,11 +176,11 @@ export const getStaticPaths = async () => {
       title: "Humboldt Area Foundation",
       position: "Mobile Applications Developer",
       date: "Feb 2020 - Dec 2021",
-      description: "What I learned about the app store.",
+      description: "",
       image: "/img/mobile-app-dev.jpeg",
       blurImage: "LHN0*haxyC9F+qbvkrDi?wo~xtR6",
-      stack: ["React", "AWS", "Wordpress", "mySql"],
-      tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
+      stack: ["React", "AWS", "WordPress", "mySql"],
+      tags: ["Next.js", "AWS", "Vercel", "DocuSign API"],
       details: [
         {
           description:
@@ -211,11 +213,11 @@ export const getStaticPaths = async () => {
       title: "Biztech Eureka",
       position: "Web Developer",
       date: "Aug 2019 - Feb 2020",
-      description: "My first job in tech.",
+      description: "",
       image: "/img/webdev.png",
       blurImage: "LSP%hmS$~T$$?akCWBjE?Yr=RkR.",
-      stack: ["React", "AWS", "Wordpress", "mySql"],
-      tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
+      stack: ["React", "AWS", "WordPress", "mySql"],
+      tags: ["Next.js", "AWS", "Vercel", "DocuSign API"],
       details: [
         {
           description:
@@ -262,11 +264,11 @@ export const getStaticProps = async ({ params }) => {
       position: "Lead Software Developer",
       date: "Mar 2022 - Now",
       description:
-        "Discover more about experience as a Lead Software Developer.",
+        "Managing and mentoring a team of developers has not only allowed me to solidify the knowledge I have gained over the years of experience with this company but has also propelled my education as I keep up with the newest technological advancements.",
       image: "/img/lead.jpeg",
       blurImage: "LHL47{A0-TZgx]4o~qX8Q+D%W;s8",
-      stack: ["React", "AWS", "Wordpress", "mySql"],
-      tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
+      stack: ["React", "AWS", "WordPress", "mySql"],
+      tags: ["Next.js", "AWS", "Vercel", "DocuSign API"],
       details: [
         {
           description:
@@ -300,11 +302,11 @@ export const getStaticProps = async ({ params }) => {
       position: "DevOps Engineer",
       date: "Jan 2021 - March 2022",
       description:
-        "Discover more about my first experience as a DevOps Engineer",
+        "I learned how to implement CI/CD and navigate a fast paced work environment.",
       image: "/img/saw-filer.jpeg",
       blurImage: "LFEyVy?b9F0J?w-pIUIU9FIokDxu",
-      stack: ["React", "AWS", "Wordpress", "mySql"],
-      tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
+      stack: ["React", "AWS", "WordPress", "mySql"],
+      tags: ["Next.js", "AWS", "Vercel", "DocuSign API"],
       details: [
         {
           description:
@@ -339,11 +341,11 @@ export const getStaticProps = async ({ params }) => {
       title: "Humboldt Area Foundation",
       position: "Mobile Applications Developer",
       date: "Feb 2020 - Dec 2021",
-      description: "What I learned about the app store.",
+      description: "",
       image: "/img/mobile-app-dev.jpeg",
       blurImage: "LHN0*haxyC9F+qbvkrDi?wo~xtR6",
-      stack: ["React", "AWS", "Wordpress", "mySql"],
-      tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
+      stack: ["React", "AWS", "WordPress", "mySql"],
+      tags: ["Next.js", "AWS", "Vercel", "DocuSign API"],
       details: [
         {
           description:
@@ -377,11 +379,11 @@ export const getStaticProps = async ({ params }) => {
       title: "Biztech Eureka",
       position: "Web Developer",
       date: "Aug 2019 - Feb 2020",
-      description: "My first job in tech.",
+      description: "",
       image: "/img/webdev.png",
       blurImage: "LSP%hmS$~T$$?akCWBjE?Yr=RkR.",
-      stack: ["React", "AWS", "Wordpress", "mySql"],
-      tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
+      stack: ["React", "AWS", "WordPress", "mySql"],
+      tags: ["Next.js", "AWS", "Vercel", "DocuSign API"],
       details: [
         {
           description:
