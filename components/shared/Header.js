@@ -3,6 +3,7 @@ import Link from "next/link";
 import ReactResizeDetector from "react-resize-detector";
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
 import ActiveLink from "components/shared/ActiveLink";
+import Image from "next/image";
 const BsNavLink = (props) => {
   const { href, title, className = "" } = props;
   return (
@@ -18,7 +19,7 @@ const BsNavLink = (props) => {
 const BsNavBrand = () => {
   return (
     <Link className="navbar-brand port-navbar-brand" href="/">
-      Luis Ruiz
+      <Image src="/img/dove-touch-icon.png" width={45} height={45} alt="logo" />
     </Link>
   );
 };
