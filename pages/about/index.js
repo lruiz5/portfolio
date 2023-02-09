@@ -75,9 +75,7 @@ const About = ({ experiences }) => (
         className="container"
         style={{ alignContent: "center", alignItems: "center" }}
       >
-        <h2 className="title" fontSize={["3rem", "4rem"]}>
-          Passionate Software Developer
-        </h2>
+        <h2 className="title">Passionate Software Developer</h2>
         <div
           className="container full-width"
           style={{
@@ -186,15 +184,10 @@ const About = ({ experiences }) => (
                         gridTemplateColumns: "repeat(2, auto)",
                       }}
                     >
-                      <h3
-                        className="title"
-                        style={{ fontSize: "1.5rem", margin: 0 }}
-                      >
-                        {data.position}
-                      </h3>
+                      <h3 className="title experience">{data.position}</h3>
                       <p
                         className="text"
-                        style={{ fontSize: "12px", margin: 0 }}
+                        style={{ fontSize: "smaller", margin: 0 }}
                       >
                         {data.date}
                       </p>
@@ -225,7 +218,7 @@ export const getStaticProps = async () => {
       slug: "biztech-lead",
       title: "Biztech Eureka",
       position: "Lead Software Developer",
-      date: "Mar 2022 - Now",
+      date: "2022 - Now",
       description:
         "My experience managing a team, providing technical leadership, and ensuring delivery of high-quality software.",
       image: "/img/lead.jpeg",
@@ -263,7 +256,7 @@ export const getStaticProps = async () => {
       slug: "biztech-devops",
       title: "Biztech Eureka",
       position: "DevOps Engineer",
-      date: "Jan 2021 - March 2022",
+      date: "2021 - 2022",
       description:
         "Optimizing the most automated lumber mill in Northern California.",
       image: "/img/saw-filer.jpeg",
@@ -303,7 +296,7 @@ export const getStaticProps = async () => {
       slug: "biztech-mobile-apps",
       title: "Humboldt Area Foundation",
       position: "Mobile Applications Developer",
-      date: "Feb 2020 - Dec 2021",
+      date: "2020 - 2021",
       description:
         "What I learned about cross-platform development and the app stores.",
       image: "/img/mobile-app-dev.jpeg",
@@ -342,7 +335,7 @@ export const getStaticProps = async () => {
       slug: "biztech-web-dev",
       title: "Biztech Eureka",
       position: "Web Developer",
-      date: "Aug 2019 - Feb 2020",
+      date: "2019 - 2020",
       description: "My first job in software development. Full Stack.",
       image: "/img/webdev.png",
       blurImage: "LSP%hmS$~T$$?akCWBjE?Yr=RkR.",

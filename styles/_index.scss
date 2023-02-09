@@ -132,7 +132,13 @@
     margin-left: 0.5rem;
   }
   
-  
+  .button-container{
+      gap: 2rem;
+      margin-top: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: stretch;
+      align-items: stretch;
+  }
   
   @media (prefers-color-scheme: dark) {
     
@@ -144,5 +150,14 @@
     }
     .logo img {
       filter: invert(1);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .button-container{
+      grid-template-columns: auto;
+    }
+    .title {
+      font-size: 3rem;
     }
   }

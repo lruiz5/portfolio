@@ -4,27 +4,6 @@ import Link from "next/link";
 import { Button } from "reactstrap";
 import styled from "styled-components";
 
-const ProjectImage = styled.img({
-  width: "100%",
-  height: "367px",
-  objectFit: "cover",
-  borderRadius: "4px",
-  transition: "0.2s ease-in-out 0s",
-  "&:hover": {
-    transform: "scale(1.02)",
-  },
-});
-
-const ProjectContainer = styled.div({
-  flexDirection: "column",
-  alignItems: "flex-start",
-  gridGap: "1.5rem",
-  width: "100%",
-  "&:hover > *img": {
-    transform: "scale(1.03)",
-  },
-});
-
 const ProjectTag = styled.li`
   color: rgb(105, 105, 105);
   font-size: 13px;
@@ -47,7 +26,7 @@ export default function Projects({ projects }) {
           </p>
         </div>
         <div
-          className="grid-container full-width"
+          className="grid-container full-width responsive-grid"
           style={{
             paddingTop: "4rem",
             paddingBottom: "4rem",
@@ -56,9 +35,9 @@ export default function Projects({ projects }) {
           }}
         >
           {projects.map(({ data }) => (
-            <ProjectContainer className="container" key={data.slug}>
+            <div className="project-container" key={data.slug}>
               <Link href={data.url} width="100%">
-                <ProjectImage src={data.preview} />
+                <img className="project-image" src={data.preview} />
               </Link>
               <div
                 className="container full-width"
@@ -74,7 +53,10 @@ export default function Projects({ projects }) {
                   </h2>
                 </Link>
                 <Link href={data.url}>
-                  <Button size="md" className="custom-button secondary">
+                  <Button
+                    size="md"
+                    className="custom-button secondary project-button"
+                  >
                     View Project
                   </Button>
                 </Link>
@@ -102,7 +84,7 @@ export default function Projects({ projects }) {
                   </ul>
                 }
               </div>
-            </ProjectContainer>
+            </div>
           ))}
         </div>
       </BasePage>
