@@ -154,9 +154,11 @@ a:hover {
 }
 
 @media (max-width: 600px) {
-  .grid-container {
+  div.grid-container.technologies {
     width: 100%;
     display: flex;
     flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
