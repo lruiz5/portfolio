@@ -15,6 +15,7 @@ import {
   SiAdobecreativecloud,
   SiPython,
   SiLinux,
+  SiNetlify,
 } from "react-icons/si";
 
 const stacks = [
@@ -39,8 +40,8 @@ const stacks = [
     url: "https://reactjs.org/",
   },
   {
-    Icon: SiLinux,
-    url: "https://linux.org/",
+    Icon: SiNetlify,
+    url: "https://www.netlify.com/",
   },
   {
     Icon: SiGooglecloud,
