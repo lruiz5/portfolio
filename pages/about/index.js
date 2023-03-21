@@ -222,7 +222,7 @@ export const getStaticProps = async () => {
       date: "2022 - Now",
       description:
         "My experience managing a team, providing technical leadership, and ensuring delivery of high-quality software.",
-      image: "/img/lead.jpeg",
+      image: "/img/lead.avif",
       blurImage: "LHL47{A0-TZgx]4o~qX8Q+D%W;s8",
       stack: ["React", "AWS", "Wordpress", "mySql"],
       tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
@@ -260,7 +260,7 @@ export const getStaticProps = async () => {
       date: "2021 - 2022",
       description:
         "Optimizing the most automated lumber mill in Northern California.",
-      image: "/img/saw-filer.jpeg",
+      image: "/img/saw-filer.avif",
       blurImage: "LFEyVy?b9F0J?w-pIUIU9FIokDxu",
       stack: ["React", "AWS", "Wordpress", "mySql"],
       tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
@@ -300,7 +300,7 @@ export const getStaticProps = async () => {
       date: "2020 - 2021",
       description:
         "What I learned about cross-platform development and the app stores.",
-      image: "/img/mobile-app-dev.jpeg",
+      image: "/img/mobile-app-dev.avif",
       blurImage: "LHN0*haxyC9F+qbvkrDi?wo~xtR6",
       stack: ["React", "AWS", "Wordpress", "mySql"],
       tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
@@ -338,7 +338,7 @@ export const getStaticProps = async () => {
       position: "Web Developer",
       date: "2019 - 2020",
       description: "My first job in software development. Full Stack.",
-      image: "/img/webdev.png",
+      image: "/img/webdev.avif",
       blurImage: "LSP%hmS$~T$$?akCWBjE?Yr=RkR.",
       stack: ["React", "AWS", "Wordpress", "mySql"],
       tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
