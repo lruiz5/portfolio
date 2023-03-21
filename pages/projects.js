@@ -1,6 +1,7 @@
 import BasePage from "components/BasePage";
 import BaseLayout from "components/layouts/BaseLayout";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "reactstrap";
 import styled from "styled-components";
 
@@ -22,7 +23,10 @@ export default function Projects({ projects }) {
           <p className="text" style={{ textAlign: "center" }}>
             I&apos;m always working on new projects. <br />
             You can find them on my&nbsp;
-            <a href="https://github.com/lruiz5">Github</a>.
+            <Link href="https://github.com/lruiz5" target={"_blank"}>
+              Github
+            </Link>
+            .
           </p>
         </div>
         <div
@@ -36,8 +40,17 @@ export default function Projects({ projects }) {
         >
           {projects.map(({ data }) => (
             <div className="project-container" key={data.slug}>
-              <Link href={data.url} width="100%">
-                <img className="project-image" src={data.preview} />
+              <Link
+                href={data.url}
+                width="100%"
+                target={"_blank"}
+                referrerPolicy="no-referrer"
+              >
+                <Image
+                  className="project-image"
+                  src={data.preview}
+                  alt={data.slug}
+                />
               </Link>
               <div
                 className="container full-width"
@@ -47,19 +60,24 @@ export default function Projects({ projects }) {
                   alignItems: "center",
                 }}
               >
-                <Link href={data.url}>
-                  <h2 className="title" style={{ fontSize: "2rem" }}>
-                    {data.title}
-                  </h2>
-                </Link>
-                <Link href={data.url}>
-                  <Button
-                    size="md"
-                    className="custom-button secondary project-button"
+                <h2 className="title" style={{ fontSize: "2rem" }}>
+                  {data.title}
+                </h2>
+
+                {data.url != "" && (
+                  <Link
+                    href={data.url}
+                    target={"_blank"}
+                    referrerPolicy="no-referrer"
                   >
-                    View Project
-                  </Button>
-                </Link>
+                    <ProjectButton
+                      size="md"
+                      className="custom-button secondary project-button"
+                    >
+                      View Project
+                    </ProjectButton>
+                  </Link>
+                )}
               </div>
               <div className="container" style={{ gap: "1rem" }}>
                 <p
@@ -96,12 +114,34 @@ export const getStaticProps = async () => {
   let projects = [
     {
       data: {
+        url: "https://bloomify.luisruiz.me",
+        slug: "bloomify",
+        title: "Bloomify",
+        caption:
+          "An e-commerce shop that showcases React Route Handling, Authentication, and API's.",
+        preview: "/img/bloomify-promo.avif",
+        tags: ["React", "json-server", "json-server-auth", "Netlify"],
+      },
+    },
+    {
+      data: {
+        url: "https://tours.luisruiz.me",
+        slug: "traveler",
+        title: "Traveler",
+        caption:
+          "A Vacation Tour Web App Front End build fully with HTML and SCSS.",
+        preview: "/img/traveler-promo.avif",
+        tags: ["HTML", "SCSS", "Sass", "Netlify"],
+      },
+    },
+    {
+      data: {
         url: "https://account.docusign.com/oauth/auth?response_type=code&scope=signature&client_id=f19d49ee-ed75-4a74-aa70-1c2213a9d290&redirect_uri=https://apply.northforklumbercompany.com",
         slug: "nfl-jobs",
         title: "SignAssure",
         caption:
           "A responsive, scalable online application that allows for identity verification using Embedded Signing via DocuSign's API.",
-        preview: "/img/nfl-docusign-promo.webp",
+        preview: "/img/nfl-docusign-promo.avif",
         tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
       },
     },
@@ -112,7 +152,7 @@ export const getStaticProps = async () => {
         title: "LumberLogger",
         caption:
           "A real-time collaborative data tracking program complete with Admin Portal. Build with Next.js, Prisma, and SQLite.",
-        preview: "/img/nflc-saws-promo.webp",
+        preview: "/img/nflc-saws-promo.avif",
         tags: ["Next.js", "Prisma", "SQLite"],
       },
     },
