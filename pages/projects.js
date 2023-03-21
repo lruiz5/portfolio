@@ -119,7 +119,7 @@ export const getStaticProps = async () => {
         title: "Bloomify",
         caption:
           "An e-commerce shop that showcases React Route Handling, Authentication, and API's.",
-        preview: "/img/bloomify-promo.avif",
+        preview: "/img/bloomify-promo.webp",
         tags: ["React", "json-server", "json-server-auth", "Netlify"],
       },
     },
@@ -130,7 +130,7 @@ export const getStaticProps = async () => {
         title: "Traveler",
         caption:
           "A Vacation Tour Web App Front End build fully with HTML and SCSS.",
-        preview: "/img/traveler-promo.avif",
+        preview: "/img/traveler-promo.webp",
         tags: ["HTML", "SCSS", "Sass", "Netlify"],
       },
     },
@@ -141,7 +141,7 @@ export const getStaticProps = async () => {
         title: "SignAssure",
         caption:
           "A responsive, scalable online application that allows for identity verification using Embedded Signing via DocuSign's API.",
-        preview: "/img/nfl-docusign-promo.avif",
+        preview: "/img/nfl-docusign-promo.webp",
         tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
       },
     },
@@ -152,7 +152,7 @@ export const getStaticProps = async () => {
         title: "LumberLogger",
         caption:
           "A real-time collaborative data tracking program complete with Admin Portal. Build with Next.js, Prisma, and SQLite.",
-        preview: "/img/nflc-saws-promo.avif",
+        preview: "/img/nflc-saws-promo.webp",
         tags: ["Next.js", "Prisma", "SQLite"],
       },
     },
