@@ -94,7 +94,9 @@ const About = ({ experiences }) => (
             from scratch. These three things are important aspects of my life
             and are integral to who i am. The natural beauty of the beach, and
             the process of baking bread allow me to tap into my creativity and
-            practice patience and attention to detail.
+            practice patience and attention to detail. Ultimately, my life is
+            fulfilled in the knowing that if I had nothing else, I know The One
+            who loves me.
           </p>
         </div>
       </div>
