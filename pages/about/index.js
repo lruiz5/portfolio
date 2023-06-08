@@ -89,14 +89,26 @@ const About = ({ experiences }) => (
             I&apos;m a Full-Stack/DevOps developer living in California.
           </p>
           <p className="text">
-            I find my joy in my faith in Jesus Christ, the peaceful atmosphere
+            {/* I find my joy in my faith in Jesus Christ, the peaceful atmosphere
             of the beach and the satisfaction and pleasure of creating something
             from scratch. These three things are important aspects of my life
             and are integral to who i am. The natural beauty of the beach, and
             the process of baking bread allow me to tap into my creativity and
             practice patience and attention to detail. Ultimately, my life is
             fulfilled in the knowing that if I had nothing else, I know The One
-            who loves me.
+            who loves me. */}
+            I have a deep love for web development, specializing in React and
+            Next.js for enterprise-level applications. I thrive in complex
+            environments where scalability and performance are critical
+            considerations. Crafting seamless user experiences, designing
+            intuitive interfaces, and architecting robust solutions tailored to
+            the unique needs of large-scale businesses are what I do best. I am
+            committed to staying up-to-date with the latest trends and best
+            practices, ensuring that I can harness the full potential of web
+            development tools to build cutting-edge applications. From
+            optimizing performance to integrating APIs and implementing dynamic
+            features, my dedication and extensive knowledge make me an
+            invaluable asset to your development team.
           </p>
         </div>
       </div>
