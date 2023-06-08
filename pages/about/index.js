@@ -105,9 +105,11 @@ const About = ({ experiences }) => (
             the unique needs of large-scale businesses are what I do best. I am
             committed to staying up-to-date with the latest trends and best
             practices, ensuring that I can harness the full potential of web
-            development tools to build cutting-edge applications. From
-            optimizing performance to integrating APIs and implementing dynamic
-            features, my dedication and extensive knowledge make me an
+            development tools to build cutting-edge applications.
+          </p>
+          <p className="text">
+            From optimizing performance to integrating APIs and implementing
+            dynamic features, my dedication and extensive knowledge make me an
             invaluable asset to your development team.
           </p>
         </div>
