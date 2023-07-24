@@ -12,7 +12,7 @@ const ProjectTag = styled.li`
 `;
 
 const ProjectButton = styled(Button)({
-  padding: "12px 30px",
+  padding: "10px 25px",
 });
 export default function Projects({ projects }) {
   return (
@@ -50,6 +50,8 @@ export default function Projects({ projects }) {
                   className="project-image"
                   src={data.preview}
                   alt={data.slug}
+                  width={500}
+                  height={250}
                 />
               </Link>
               <div
@@ -114,6 +116,17 @@ export const getStaticProps = async () => {
   let projects = [
     {
       data: {
+        url: "https://tasteandsee.luisruiz.me",
+        slug: "taste-and-seee",
+        title: "Taste & See",
+        caption:
+          "My online recipe book. Create/Edit/Delete options with admin login. Built with React.js, Firebase Authentication and Firestore.",
+        preview: "/img/tns-promo.webp",
+        tags: ["React", "Firebase Auth", "Firebase Firestore", "Vercel"],
+      },
+    },
+    {
+      data: {
         url: "https://bloomify.luisruiz.me",
         slug: "bloomify",
         title: "Bloomify",
@@ -123,17 +136,7 @@ export const getStaticProps = async () => {
         tags: ["React", "json-server", "json-server-auth", "Netlify"],
       },
     },
-    {
-      data: {
-        url: "https://tours.luisruiz.me",
-        slug: "traveler",
-        title: "Traveler",
-        caption:
-          "A Vacation Tour Web App Front End build fully with HTML and SCSS.",
-        preview: "/img/traveler-promo.webp",
-        tags: ["HTML", "SCSS", "Sass", "Netlify"],
-      },
-    },
+
     {
       data: {
         url: "https://account.docusign.com/oauth/auth?response_type=code&scope=signature&client_id=f19d49ee-ed75-4a74-aa70-1c2213a9d290&redirect_uri=https://apply.northforklumbercompany.com",
