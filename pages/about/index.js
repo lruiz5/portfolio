@@ -232,12 +232,12 @@ const About = ({ experiences }) => (
 export const getStaticProps = async () => {
   const experiences = [
     {
-      slug: "biztech-lead",
+      slug: "biztech-react-developer",
       title: "Biztech Eureka",
-      position: "Lead Software Developer",
-      date: "2022 - Now",
+      position: "React JS Developer",
+      date: "Dec 2021 - Now",
       description:
-        "My experience managing a team, providing technical leadership, and ensuring delivery of high-quality software.",
+        "My experience building and maintaining web applications with React and Next.js",
       image: "/img/lead.jpg",
       blurImage: "LHL47{A0-TZgx]4o~qX8Q+D%W;s8",
       stack: ["React", "AWS", "Wordpress", "mySql"],
@@ -245,75 +245,51 @@ export const getStaticProps = async () => {
       details: [
         {
           description:
-            "Provide detailed specifications for proposed solutions including:",
-          details: [
-            "Establishing milestones for necessary contributions from departments",
-            "Developing processes to facilitate collaboration",
-            "Estimating materials, manpower and time required to complete a project.",
-          ],
-        },
-        {
-          description:
-            "Generate detailed documentation of processes including product testing, DB schemas, code comments, etc.",
+            "Lead the development and delivery of web-based applications, providing technical expertise and guidance to a small team of developers.",
           details: [],
         },
         {
           description:
-            "Work with teammates in the migration of legacy applications to current technologies.",
+            "Designed and implemented scalable and maintainable web solutions using React, Next.js, Express, and AWS Technologies, ensuring high performance and optimal user experiences.",
           details: [],
         },
         {
           description:
-            "Provided technical leadership to teammates through coaching/mentorship ensuring they adhere to determined software quality standards.",
-          details: [],
-        },
-      ],
-    },
-    {
-      slug: "biztech-devops",
-      title: "Biztech Eureka",
-      position: "DevOps Engineer",
-      date: "2021 - 2022",
-      description:
-        "Optimizing the most automated lumber mill in Northern California.",
-      image: "/img/saw-filer.jpg",
-      blurImage: "LFEyVy?b9F0J?w-pIUIU9FIokDxu",
-      stack: ["React", "AWS", "Wordpress", "mySql"],
-      tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
-      details: [
-        {
-          description:
-            "Implemented continuous integration and automate update deployment in technologies including:",
-          details: [
-            "SQL Databases",
-            "Linux and Windows Servers",
-            "Websites",
-            "Internal back-end systems.",
-          ],
-        },
-        {
-          description:
-            "Implemented version control of all software preceding my employment.",
+            "Collaborated with stakeholders, including designers, product managers, and crossfunctional teams, to translate business requirements into technical specifications and actionable development plans.",
           details: [],
         },
         {
           description:
-            "Using React/Nextjs, designed/developed programs to modernize outdated processes across 6 companies.",
+            "Conducted code reviews, ensuring adherence to coding standards, code quality, and performance optimization.",
           details: [],
         },
         {
           description:
-            "Deployed 2 software iterations per month for a year. Increased customer satisfaction with software by 25%. Presided over a period of 20% revenue growth.",
+            "Implemented and promoted Agile development methodologies, such as Scrum, facilitating effective project management, efficient collaboration, and on-time delivery.",
+          details: [],
+        },
+        {
+          description:
+            "Researched and evaluated emerging web technologies and trends, recommending and implementing innovative solutions to enhance the company's web development capabilities.",
+          details: [],
+        },
+        {
+          description:
+            "Actively contributed to architectural discussions and decisions, ensuring scalability, security, and maintainability of web applications.",
+          details: [],
+        },
+        {
+          description:
+            "Kept up-to-date with industry trends and best practices in web development, continuously enhancing technical skills and knowledge.",
           details: [],
         },
       ],
     },
-
     {
       slug: "biztech-mobile-apps",
       title: "Humboldt Area Foundation",
       position: "Mobile Applications Developer",
-      date: "2020 - 2021",
+      date: "Feb 2021 - Dec 2021",
       description:
         "What I learned about cross-platform development and the app stores.",
       image: "/img/mobile-app-dev.jpg",
@@ -323,22 +299,22 @@ export const getStaticProps = async () => {
       details: [
         {
           description:
-            "Met with clients weekly to understand their needs, considering time and budget to build estimates.",
+            "Created mobile applications using React Native, resulting in published apps on both Google Play Store and iOS App Store.",
           details: [],
         },
         {
           description:
-            "Coordinated with development/design teams to develop cross platform mobile applications.",
+            "Collaborated with designers and product managers to define application features and user experience.",
           details: [],
         },
         {
           description:
-            "Using React Native, design/develop scalable UI components for JavaScript-based online and mobile apps.",
+            "Integrated backend APIs to fetch and update data, ensuring smooth data flow between frontend and backend systems.",
           details: [],
         },
         {
           description:
-            "Configure AWS NoSQL and Relational DB services while making use of JS libraries for asynchronous API calls as well as improving performance of preexisting mobile apps.",
+            "Conducted thorough testing, debugging, and performance optimization to deliver high quality user experiences.",
           details: [],
         },
         {
@@ -352,7 +328,7 @@ export const getStaticProps = async () => {
       slug: "biztech-web-dev",
       title: "Biztech Eureka",
       position: "Web Developer",
-      date: "2019 - 2020",
+      date: "Aug 2020 - Feb 2021",
       description: "My first job in software development. Full Stack.",
       image: "/img/webdev.png",
       blurImage: "LSP%hmS$~T$$?akCWBjE?Yr=RkR.",
@@ -361,27 +337,27 @@ export const getStaticProps = async () => {
       details: [
         {
           description:
-            "Build, design, and maintain websites/web applications used in Biztech’s network of clients.",
+            "Developed web applications using Node.js, React, and Next.js, delivering high-quality, responsive websites.",
           details: [],
         },
         {
           description:
-            "Executed assignments using scripts, and programming languages such as HTML/CSS, JavaScript, and APIs.",
+            "Collaborated with cross-functional teams to gather requirements and translate them into functional user interfaces.",
           details: [],
         },
         {
           description:
-            "Evaluated written code to ensure it met industry standards and was compatible across all device platforms.",
+            "Implemented RESTful APIs to interact with backend services and ensured seamless integration with frontend components.",
           details: [],
         },
         {
           description:
-            "Maintained a professional understanding of web app development by participating in online seminars/courses.",
+            "Utilized Auth0 for authentication and Google Firebase for real-time data synchronization and cloud functions.",
           details: [],
         },
         {
           description:
-            "Worked with modern tools including YouTrack, Microsoft Teams, GitHub, Google Docs, etc.",
+            "Deployed applications on AWS and optimized performance using AWS services such as Amplify, EC2 and S3.",
           details: [],
         },
       ],

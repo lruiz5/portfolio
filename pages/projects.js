@@ -116,6 +116,17 @@ export const getStaticProps = async () => {
   let projects = [
     {
       data: {
+        url: "https://nextchat.luisruiz.me",
+        slug: "next-chat",
+        title: "NextChat",
+        caption:
+          "An interactive chatbot experience powered by OpenAI's GPT-3.5 API. Built with Next.js and Tailwindcss.",
+        preview: "/img/nextchat-promo.webp",
+        tags: ["Next.js", "OpenAI", "Tailwindcss", "Vercel"],
+      },
+    },
+    {
+      data: {
         url: "https://tasteandsee.luisruiz.me",
         slug: "taste-and-seee",
         title: "Taste & See",
@@ -148,7 +159,7 @@ export const getStaticProps = async () => {
         tags: ["Next.js", "AWS", "Vercel", "Docusign API"],
       },
     },
-    {
+    /* {
       data: {
         url: "",
         slug: "nfl-saws",
@@ -158,7 +169,7 @@ export const getStaticProps = async () => {
         preview: "/img/nflc-saws-promo.webp",
         tags: ["Next.js", "Prisma", "SQLite"],
       },
-    },
+    }, */
   ];
 
   return {

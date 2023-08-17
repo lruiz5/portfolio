@@ -86,7 +86,7 @@ const Home = () => (
             to any inqueries. Feel free to ask me anything!
           </p>
           <div className="grid-container button-container">
-            <Link href="mailto:hello@shellbear.me">
+            <Link href={`mailto:${process.env.CONTACT_EMAIL}`}>
               <Button size="lg" className="custom-button primary full-width">
                 <motion.span
                   initial={{ display: "inline-block" }}
