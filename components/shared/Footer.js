@@ -9,7 +9,7 @@ const links = [
     icon: SiGithub,
   },
   {
-    url: `mailto:${process.env.CONTACT_EMAIL}`,
+    url: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`,
     icon: MdMail,
   },
   {
@@ -55,7 +55,7 @@ const Footer = () => {
           </Link>
           <Link
             className="footer-link fw-bold px-3"
-            href={`mailto:${process.env.CONTACT_EMAIL}`}
+            href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`}
           >
             Contact
           </Link>
