@@ -116,7 +116,7 @@ export const getStaticProps = async () => {
   let projects = [
     {
       data: {
-        url: "https://nextchat.luisruiz.me",
+        url: "https://nextchat.rzhomelab.com",
         slug: "next-chat",
         title: "NextChat",
         caption:
