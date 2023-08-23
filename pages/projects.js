@@ -120,7 +120,7 @@ export const getStaticProps = async () => {
         slug: "next-chat",
         title: "NextChat",
         caption:
-          "An interactive chatbot experience powered by OpenAI's GPT-3.5 API. Built with Next.js and Tailwindcss.",
+          "An interactive chatbot experience powered by OpenAI's GPT-4 API. Built with Next.js and Tailwindcss.",
         preview: "/img/nextchat-promo.webp",
         tags: ["Next.js", "OpenAI", "Tailwindcss", "Vercel"],
       },
